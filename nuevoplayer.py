@@ -5,20 +5,38 @@ import os
 mp3_folder = 'downloads'
 mp3_files = [os.path.join(mp3_folder, f) for f in os.listdir(mp3_folder) if f.endswith('.mp3')]
 
+# Lista de archivos MP3
 st.header("Lista de archivos MP3:")
-for mp3_file in mp3_files:
-    st.audio(mp3_file, format='audio/mp3')
+selected_file = st.selectbox("Seleccionar archivo MP3:", mp3_files)
 
-autoplay_script = """
+# Mostrar el reproductor de audio
+if selected_file:
+    audio_element = st.audio(selected_file, format='audio/mp3', start_time=0)
+
+# Cargar código JavaScript para controlar la reproducción y detención del audio
+js_code = f"""
 <script>
-window.onload = function() {
-    var audioElements = document.getElementsByTagName("audio");
-    if (audioElements.length > 0) {
-        audioElements[0].play();
-    }
-}
+let audioElement = document.querySelector('audio');
+let playButton = document.createElement('button');
+let stopButton = document.createElement('button');
+
+playButton.textContent = 'Play';
+stopButton.textContent = 'Stop';
+
+playButton.onclick = function() {{
+    audioElement.play();
+}};
+
+stopButton.onclick = function() {{
+    audioElement.pause();
+    audioElement.currentTime = 0;
+}};
+
+document.body.appendChild(playButton);
+document.body.appendChild(stopButton);
 </script>
 """
 
-# Mostrar el código JavaScript en la página
-st.markdown(autoplay_script, unsafe_allow_html=True)
+# Mostrar los botones de reproducción y detención
+if selected_file:
+    st.markdown(js_code, unsafe_allow_html=True)
