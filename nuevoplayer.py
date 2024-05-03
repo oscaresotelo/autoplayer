@@ -9,19 +9,19 @@ mp3_files = [f for f in os.listdir(mp3_folder) if f.endswith('.mp3')]
 st.header("Lista de archivos MP3:")
 selected_file = st.selectbox("Seleccionar archivo MP3:", mp3_files)
 
-# Mostrar el reproductor de audio
+# Obtener la URL del archivo seleccionado
 if selected_file:
     audio_path = os.path.join(mp3_folder, selected_file)
-    audio_file = open(audio_path, 'rb').read()
-    st.audio(audio_file, format='audio/mp3', start_time=0)
+    audio_url = f"/{audio_path}"
 
     # Cargar código JavaScript para controlar la reproducción automática del audio
     js_code = f"""
     <script>
-    document.addEventListener('DOMContentLoaded', function() {{
-        var audioElement = document.querySelector('audio');
-        audioElement.play();
-    }});
+    var audioElement = new Audio("{audio_url}");
+    audioElement.autoplay = true;
+    audioElement.load();
     </script>
     """
+
+    # Mostrar el reproductor de audio
     st.markdown(js_code, unsafe_allow_html=True)
