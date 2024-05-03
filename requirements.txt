@@ -1,3 +1,4 @@
 streamlit
 eyed3
 youtube_search
+pytube
