@@ -91,14 +91,14 @@ table {
 }
 
 thead th {
-  background-color: #2B6CB0;
-  color: #FFFFFF;
+  background-color: #001F3F;
+  color: #001F3F;
   text-align: left;
   padding: 10px;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #E2E8F0;
+  background-color: #001F3F;
 }
 
 tbody td {
@@ -106,7 +106,7 @@ tbody td {
 }
 
 tbody td a {
-  color: #2B6CB0;
+  color: #001F3F;
   text-decoration: none;
 }
 
@@ -168,7 +168,7 @@ div.css-dm3ece.everg990{
 audio {
     /* Estilos para el control de audio */
     width: 100%; /* Ancho completo */
-    background-color: #f0f0f0; /* Color de fondo */
+    background-color: #001F3F; /* Color de fondo */
     padding: 10px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     margin-bottom: 10px; /* Margen inferior */
@@ -180,4 +180,8 @@ audio::-webkit-media-controls {
     background-color: #fff; /* Color de fondo de los controles */
     border-radius: 5px; /* Bordes redondeados */
     /* Agrega más estilos según tus necesidades */
+}
+body {
+    background-color: #001F3F;
+    color: white; /* Cambia el color del texto para que se vea bien sobre el fondo oscuro */
 }
