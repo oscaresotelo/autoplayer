@@ -1,0 +1,65 @@
+body {
+    background-image: url(background-image/background8.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.music-player-body {
+    width: 320px;
+    height: 390px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+h2,
+h3 {
+    margin-top: 0px;
+    color: #fff;
+}
+
+/* Add styles for the track image */
+.track-image {
+    max-width: 90%;
+    height: 170px;
+    margin-top: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+
+audio {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+/* Change button background color to green on hover */
+.controls button:hover {
+    background-color: #4CAF50;
+}

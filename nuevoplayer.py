@@ -1,7 +1,6 @@
-import base64
-
 import streamlit as st
-
+import os
+import base64
 
 def autoplay_audio(file_path: str):
     with open(file_path, "rb") as f:
@@ -17,7 +16,15 @@ def autoplay_audio(file_path: str):
             unsafe_allow_html=True,
         )
 
+# Carpeta donde se encuentran los archivos MP3
+mp3_folder = 'downloads'
+mp3_files = [f for f in os.listdir(mp3_folder) if f.endswith('.mp3')]
 
-st.write("# Auto-playing Audio!")
+# Lista de archivos MP3
+st.header("Lista de archivos MP3:")
+selected_file = st.selectbox("Seleccionar archivo MP3:", mp3_files)
 
-autoplay_audio("1.mp3")
+# Obtener la URL del archivo seleccionado
+if selected_file:
+    audio_path = os.path.join(mp3_folder, selected_file)
+    autoplay_audio(audio_path)

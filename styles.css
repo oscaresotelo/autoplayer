@@ -1,143 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+/* Estilos para el título principal */
 
-html{
-    box-sizing: border-box;
+.titulo-rojo {
+    color: red;
 }
 
-body{
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 12px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  color: red;
+  text-shadow: 2px 2px #E2E8F0;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-.background{
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    z-index: -1;
+/* Estilos para la barra de navegación lateral */
+.css-79elbk  {
+background-color: #011839;
+    background-image: none;
+    color: #ffffff
+}
+.css-pkbazv   {
+background-color: #011839;
+    background-image: none;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+.css-17lntkn    {
+background-color: #011839;
+    background-image: none;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+.css-nziaof  {
+background-color: #011839;
+    background-image: none;
+    color: #ffffff
+}
+.sidebar .sidebar-content {
+    background-color: #ff000050;
+    color: white;
 }
 
-.background img{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    min-width: 50%;
-    min-height: 50%;
-    filter: blur(15px);
-    -webkit-filter: blur(50px);
-    transform: scale(1.1);
+.sidebar .sidebar-content .sidebar-section .title {
+    color: green;
 }
 
-.container{
-    background-color: #e7e7e7;
-    height: 500px;
-    width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease;
+
+.sidebar .sidebar-content .sidebar-section {
+  margin-top: 30px;
 }
 
-.container:hover{
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+.sidebar .sidebar-content .sidebar-section .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2D3748;
+  margin-bottom: 10px;
 }
 
-.player-img{
-    width: 300px;
-    height: 300px;
-    position: relative;
-    top: -50px;
-    left: 50px;
+.sidebar .sidebar-content .sidebar-section select {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #CBD5E0;
+  padding: 8px;
+  font-size: 36px;
+  color: #4A5568;
+  background-color: blue;
 }
 
-.player-img img{
-    object-fit: cover;
-    border-radius: 20px;
-    height: 0;
-    width: 0;
-    opacity: 0;
-    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+.sidebar .sidebar-content .sidebar-section input[type="date"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #CBD5E0;
+  padding: 8px;
+  font-size: 36px;
+  color: #4A5568;
+  background-color: blue;
 }
 
-.player-img:hover img{
-    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.8);
+/* Estilos para la tabla de resultados */
+table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 1200px;
 }
 
-.player-img img.active{
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s;
-    opacity: 1;
+thead th {
+  background-color: #2B6CB0;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10px;
 }
 
-h2{
-    font-size: 25px;
-    text-align: center;
-    font-weight: 500;
-    margin: 10px 0 0;
+tbody tr:nth-child(even) {
+  background-color: #E2E8F0;
 }
 
-h3{
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500;
-    margin: 10px 0 0;
+tbody td {
+  padding: 10px;
 }
 
-.player-progress{
-    background-color: #fff;
+tbody td a {
+  color: #2B6CB0;
+  text-decoration: none;
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-btn {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+.stButton>button {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 40px 40px;
+  border: none;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Centering text in each gray box */
+div.css-1ht1j8u.e16fv1kl0 {
+  text-align: center;
+}
+
+/* Row 1 */
+div.css-1r6slb0.e1tzin5v2 {
+    background-color: rgb(63, 79, 107);
+    padding: 3% 3% 3% 3%;
     border-radius: 5px;
-    cursor: pointer;
-    margin: 40px 20px 35px;
-    height: 6px;
-    width: 90%;
 }
 
-.progress{
-    background-color: #212121;
+/* Row 2 */
+div.css-12w0qpk.e1tzin5v2 {
+    background-color: rgba(220, 220, 220, 0.60);
+    padding: 3% 3% 3% 3%;
     border-radius: 5px;
-    height: 100%;
-    width: 0%;
-    transition: width 0.1s linear;
+}
+div.css-dm3ece.everg990{
+
+}
+.st-emotion-cache-16idsys p {
+    word-break: break-word;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+audio {
+    /* Estilos para el control de audio */
+    width: 100%; /* Ancho completo */
+    background-color: #f0f0f0; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Margen inferior */
+    /* Agrega más estilos según tus necesidades */
 }
 
-.music-duration{
-    position: relative;
-    top: -25px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.player-controls{
-    position: relative;
-    top: -15px;
-    left: 120px;
-    width: 200px;
-}
-
-.fa-solid{
-    font-size: 30px;
-    color: #666;
-    margin-right: 30px;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.3s ease;
-}
-
-.fa-solid:hover{
-    filter: brightness(40%);
-}
-
-.play-button{
-    font-size: 44px;
-    position: relative;
-    top: 3px;
+/* Estilos para los controles de reproducción */
+audio::-webkit-media-controls {
+    background-color: #fff; /* Color de fondo de los controles */
+    border-radius: 5px; /* Bordes redondeados */
+    /* Agrega más estilos según tus necesidades */
 }
