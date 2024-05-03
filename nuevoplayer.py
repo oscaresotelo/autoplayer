@@ -11,12 +11,12 @@ for mp3_file in mp3_files:
 
 autoplay_script = """
 <script>
-document.addEventListener("DOMContentLoaded", function(event) {
+window.onload = function() {
     var audioElements = document.getElementsByTagName("audio");
     if (audioElements.length > 0) {
-        audioElements[0].autoplay = true;
+        audioElements[0].play();
     }
-});
+}
 </script>
 """
 
